@@ -7,7 +7,7 @@ Creates a new storage definition for a reservation
 
 ```
 New-vRAReservationStorageDefinition -Type <String> -ComputeResourceId <String> -Path <String>
- -ReservedSizeGB <Int32> [-Priority <Int32>] [-WhatIf] [-Confirm]
+ -ReservedSizeGB <Int32> [-Priority <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -18,7 +18,7 @@ One or more of these can be added to an array and passed to New-vRAReservation.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 # Create a storage definition for type vSphere in vRA 7.1
 ```
@@ -27,7 +27,7 @@ $StorageDefinitionArray = @()
 $Storage1 = New-vRAReservationStorageDefinition -Type 'vSphere' -ComputeResourceId 75ae3400-beb5-4b0b-895a-0484413c93b1 -Path 'Datastore01' -ReservedSizeGB 10 -Priority 0 
 $StorageDefinitionArray += $Storage1
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 # Create a storage definition for type vSphere in vRA 7.2 or later
 ```
@@ -46,7 +46,7 @@ Valid types vRA 7.2 and later: Amazon EC2, Azure, Hyper-V (SCVMM), Hyper-V (Stan
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -61,7 +61,7 @@ The id of the compute resource
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -76,7 +76,7 @@ The storage path
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -91,7 +91,7 @@ The size in GB of this reservation
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -106,7 +106,7 @@ The priority of storage
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,6 +146,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String.
@@ -158,4 +162,3 @@ System.Int.
 ## NOTES
 
 ## RELATED LINKS
-

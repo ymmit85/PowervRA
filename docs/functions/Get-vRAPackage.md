@@ -7,17 +7,17 @@ Retrieve vRA Packages
 
 ### Standard (Default)
 ```
-Get-vRAPackage [-Page <Int32>] [-Limit <Int32>]
+Get-vRAPackage [-Page <Int32>] [-Limit <Int32>] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Get-vRAPackage -Id <String[]> [-Page <Int32>] [-Limit <Int32>]
+Get-vRAPackage -Id <String[]> [-Page <Int32>] [-Limit <Int32>] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-vRAPackage -Name <String[]> [-Page <Int32>] [-Limit <Int32>]
+Get-vRAPackage -Name <String[]> [-Page <Int32>] [-Limit <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,17 +25,17 @@ Retrieve vRA Packages
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRAPackage
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRAPackage -Id "b2d72c5d-775b-400c-8d79-b2483e321bae"
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRAPackage -Name "Package01","Package02"
 ```
@@ -48,7 +48,7 @@ Specify the ID of a Package
 ```yaml
 Type: String[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -63,7 +63,7 @@ Specify the Name of a Package
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -78,7 +78,7 @@ The index of the page to display.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ This has a default value of 100
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,6 +102,10 @@ Default value: 100
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -115,4 +119,3 @@ System.Int
 ## NOTES
 
 ## RELATED LINKS
-

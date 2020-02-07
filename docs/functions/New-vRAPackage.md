@@ -7,17 +7,18 @@ Create a vRA Content Package
 
 ### ById (Default)
 ```
-New-vRAPackage -Name <String> [-Description <String>] -Id <String[]> [-WhatIf] [-Confirm]
+New-vRAPackage -Name <String> [-Description <String>] -Id <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
 New-vRAPackage -Name <String> [-Description <String>] -ContentName <String[]> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### JSON
 ```
-New-vRAPackage [-Description <String>] -JSON <String> [-WhatIf] [-Confirm]
+New-vRAPackage [-Description <String>] -JSON <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,22 +26,22 @@ Create a vRA Package
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 New-vRAPackage -Name Package01 -Description "This is Content Package 01" -Id "58e10956-172a-48f6-9373-932f99eab37a","0c74b085-dbc1-4fea-9cbf-a1601f668a1f"
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 New-vRAPackage -Name Package01 -Description "This is Content Package 01" -ContentName "Blueprint01","Blueprint02"
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRAContent | New-vRAPackage -Name Package01 - Description "This is Content Package 01"
 ```
 
-### -------------------------- EXAMPLE 4 --------------------------
+### EXAMPLE 4
 ```
 $JSON = @"
 ```
@@ -61,7 +62,7 @@ Content Package Name
 ```yaml
 Type: String
 Parameter Sets: ById, ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -76,7 +77,7 @@ Content Package Description
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +107,7 @@ A list of content names to include in the Package
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -121,7 +122,7 @@ Body text to send in JSON format
 ```yaml
 Type: String
 Parameter Sets: JSON
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -161,6 +162,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String.
@@ -172,4 +177,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

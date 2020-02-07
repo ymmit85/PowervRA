@@ -9,12 +9,12 @@ Create a new entitlement
 ```
 New-vRAEntitlement -Name <String> [-Description <String>] -BusinessGroup <String> [-Principals <String[]>]
  [-EntitledCatalogItems <String[]>] [-EntitledResourceOperations <String[]>] [-EntitledServices <String[]>]
- [-LocalScopeForActions <Boolean>] [-WhatIf] [-Confirm]
+ [-LocalScopeForActions <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### JSON
 ```
-New-vRAEntitlement -JSON <String> [-WhatIf] [-Confirm]
+New-vRAEntitlement -JSON <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,12 +22,12 @@ Create a new entitlement
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 New-vRAEntitlement -Name "TestEntitlement" -Description "a test" -BusinessGroup "Test01" -Principals "user@vsphere.local" -EntitledCatalogItems "centos7","centos6" -EntitledServices "Default service" -Verbose
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 $JSON = @"
 ```
@@ -74,7 +74,7 @@ The name of the entitlement
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -89,7 +89,7 @@ A description of the entitlement
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ The business group that will be associated with the entitlement
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -121,7 +121,7 @@ If this parameter is not specified, the entitlement will be created as DRAFT
 ```yaml
 Type: String[]
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,7 +136,7 @@ One or more entitled catalog item
 ```yaml
 Type: String[]
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +152,7 @@ Infrastructure.Machine.Action.PowerOn)
 ```yaml
 Type: String[]
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ One or more entitled service
 ```yaml
 Type: String[]
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +185,7 @@ The default value for this parameter is True.
 ```yaml
 Type: Boolean
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -200,7 +200,7 @@ Body text to send in JSON format
 ```yaml
 Type: String
 Parameter Sets: JSON
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -240,6 +240,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String.
@@ -251,4 +255,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

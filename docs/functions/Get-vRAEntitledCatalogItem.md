@@ -7,17 +7,17 @@ Get a catalog item that the user is entitled to see
 
 ### Standard (Default)
 ```
-Get-vRAEntitledCatalogItem [-Service <String>] [-Page <Int32>] [-Limit <Int32>]
+Get-vRAEntitledCatalogItem [-Service <String>] [-Page <Int32>] [-Limit <Int32>] [<CommonParameters>]
 ```
 
 ### ByID
 ```
-Get-vRAEntitledCatalogItem -Id <String[]>
+Get-vRAEntitledCatalogItem -Id <String[]> [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-vRAEntitledCatalogItem -Name <String[]>
+Get-vRAEntitledCatalogItem -Name <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,27 +30,27 @@ Consumer Entitled CatalogItem(s) are basically catalog items:
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRAEntitledCatalogItem
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRAEntitledCatalogItem -Limit 9999
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRAEntitledCatalogItem -Service "Default Service"
 ```
 
-### -------------------------- EXAMPLE 4 --------------------------
+### EXAMPLE 4
 ```
 Get-vRAEntitledCatalogItem -Id dab4e578-57c5-4a30-b3b7-2a5cefa52e9e
 ```
 
-### -------------------------- EXAMPLE 5 --------------------------
+### EXAMPLE 5
 ```
 Get-vRAEntitledCatalogItem -Name Centos_Template
 ```
@@ -63,7 +63,7 @@ The id of the catalog item
 ```yaml
 Type: String[]
 Parameter Sets: ByID
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -78,7 +78,7 @@ The name of the catalog item
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -93,7 +93,7 @@ Return catalog items in a specific service
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ The index of the page to display
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ This has a default value of 100
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,6 +132,10 @@ Default value: 100
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -145,4 +149,3 @@ System.Int
 ## NOTES
 
 ## RELATED LINKS
-

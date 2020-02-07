@@ -6,7 +6,7 @@ Remove an external network profile
 ## SYNTAX
 
 ```
-Remove-vRAExternalNetworkProfile [-Id] <String[]> [-WhatIf] [-Confirm]
+Remove-vRAExternalNetworkProfile [-Id] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -14,12 +14,12 @@ Remove an external network profile
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRAExternalNetworkProfile -Name NetworkProfile01 | Remove-vRAExternalNetworkProfile
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Remove-vRExternalANetworkProfile -Id 597ff2c1-a35f-4a81-bfd3-ca014
 ```
@@ -32,7 +32,7 @@ The id of the external network profile
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -72,6 +72,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
@@ -81,4 +85,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

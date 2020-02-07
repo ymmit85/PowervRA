@@ -6,7 +6,7 @@ Retrieve available Resource Actions for a resource
 ## SYNTAX
 
 ```
-Get-vRAResourceAction [-ResourceId] <String[]>
+Get-vRAResourceAction [-ResourceId] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -14,12 +14,12 @@ A resourceAction is a specific type of ResourceOperation that is performed by su
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRAResource -Name vm01 | Get-vRAResourceAction
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRAResource -Name vm01 | Get-vRAResourceAction | Select Id, Name, BindingId
 ```
@@ -32,7 +32,7 @@ The id of the resource
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -40,6 +40,10 @@ Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -52,4 +56,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

@@ -6,7 +6,7 @@ Remove a vRA Tenant Directory
 ## SYNTAX
 
 ```
-Remove-vRATenantDirectory [-Id] <String> [-Domain] <String> [-WhatIf] [-Confirm]
+Remove-vRATenantDirectory [-Id] <String> [-Domain] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -14,12 +14,12 @@ Remove a vRA Tenant Directory
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Remove-vRATenantDirectory -Id Tenant01 -Domain vrademo.local
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 $Id = "Tenant01"
 ```
@@ -34,7 +34,7 @@ Tenant Id
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -49,7 +49,7 @@ Tenant Directory Domain
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -89,6 +89,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String.
@@ -100,4 +104,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

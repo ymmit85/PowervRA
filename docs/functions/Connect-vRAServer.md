@@ -8,13 +8,13 @@ Connect to a vRA Server
 ### Username (Default)
 ```
 Connect-vRAServer -Server <String> [-Tenant <String>] -Username <String> -Password <SecureString>
- [-IgnoreCertRequirements] [-SslProtocol <String>]
+ [-IgnoreCertRequirements] [-SslProtocol <String>] [<CommonParameters>]
 ```
 
 ### Credential
 ```
 Connect-vRAServer -Server <String> [-Tenant <String>] -Credential <PSCredential> [-IgnoreCertRequirements]
- [-SslProtocol <String>]
+ [-SslProtocol <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,12 +22,14 @@ Connect to a vRA Server and generate a connection object with Servername, Token 
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
-Connect-vRAServer -Server vraappliance01.domain.local -Tenant Tenant01 -Credential (Get-Credential)
+$cred = Get-Credential
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+Connect-vRAServer -Server vraappliance01.domain.local -Tenant Tenant01 -Credential $cred
+
+### EXAMPLE 2
 ```
 $SecurePassword = ConvertTo-SecureString "P@ssword" -AsPlainText -Force
 ```
@@ -42,7 +44,7 @@ vRA Server to connect to
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -57,7 +59,7 @@ Tenant to connect to
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -68,11 +70,12 @@ Accept wildcard characters: False
 
 ### -Username
 Username to connect with
+For domain accounts ensure to specify the Username in the format username@domain, not Domain\Username
 
 ```yaml
 Type: String
 Parameter Sets: Username
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -87,7 +90,7 @@ Password to connect with
 ```yaml
 Type: SecureString
 Parameter Sets: Username
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -98,11 +101,12 @@ Accept wildcard characters: False
 
 ### -Credential
 Credential object to connect with
+For domain accounts ensure to specify the Username in the format username@domain, not Domain\Username
 
 ```yaml
 Type: PSCredential
 Parameter Sets: Credential
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -117,7 +121,7 @@ Ignore requirements to use fully signed certificates
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +139,7 @@ PowerShell Core: Tls, Tls11, Tls12
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,6 +147,10 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -158,4 +166,3 @@ Switch
 ## NOTES
 
 ## RELATED LINKS
-

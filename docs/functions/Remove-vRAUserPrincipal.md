@@ -6,7 +6,7 @@ Remove a vRA local user principal
 ## SYNTAX
 
 ```
-Remove-vRAUserPrincipal [-Id] <String[]> [[-Tenant] <String>] [-WhatIf] [-Confirm]
+Remove-vRAUserPrincipal [-Id] <String[]> [[-Tenant] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -14,12 +14,12 @@ Remove a vRA local user principal
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Remove-vRAUserPrincipal -PrincipalId user@vsphere.local
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRAUserPrincipal -Id user@vsphere.local | Remove-vRAUserPrincipal
 ```
@@ -47,7 +47,7 @@ The tenant of the user
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -87,6 +87,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String.
@@ -98,4 +102,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

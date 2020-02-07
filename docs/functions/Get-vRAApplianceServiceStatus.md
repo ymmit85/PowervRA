@@ -9,7 +9,7 @@ Use Get-vRAComponentRegistryServiceStatus instead.
 ## SYNTAX
 
 ```
-Get-vRAApplianceServiceStatus [[-Name] <String[]>] [[-Limit] <String>]
+Get-vRAApplianceServiceStatus [[-Name] <String[]>] [[-Limit] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -21,17 +21,17 @@ Use Get-vRAComponentRegistryServiceStatus instead.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRAApplianceServiceStatus
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRAApplianceServiceStatus -Limit 9999
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRAApplianceServiceStatus -Name iaas-service
 ```
@@ -44,7 +44,7 @@ The name of the service to query
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -60,7 +60,7 @@ This has a default value of 100.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -68,6 +68,10 @@ Default value: 100
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -80,4 +84,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

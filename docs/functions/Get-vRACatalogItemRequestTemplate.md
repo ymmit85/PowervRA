@@ -7,12 +7,12 @@ Get the request template of a catalog item that the user is entitled to see
 
 ### ById (Default)
 ```
-Get-vRACatalogItemRequestTemplate -Id <String>
+Get-vRACatalogItemRequestTemplate -Id <String> [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-vRACatalogItemRequestTemplate -Name <String>
+Get-vRACatalogItemRequestTemplate -Name <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -20,27 +20,27 @@ Get the request template of a catalog item that the user is entitled to see and 
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRAConsumerCatalogItemRequestTemplate -Id dab4e578-57c5-4a30-b3b7-2a5cefa52e9e
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRAConsumerCatalogItemRequestTemplate -Name Centos_Template
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRAConsumerEntitledCatalogItem | Get-vRACatalogItemRequestTemplate
 ```
 
-### -------------------------- EXAMPLE 4 --------------------------
+### EXAMPLE 4
 ```
 Get-vRAConsumerEntitledCatalogItem -Name Centos_Template | Get-vRACatalogItemRequestTemplate
 ```
 
-### -------------------------- EXAMPLE 5 --------------------------
+### EXAMPLE 5
 ```
 Get-vRAConsumerEntitledCatalogItem -Name Centos_Template | Get-vRACatalogItemRequestTemplate | ConvertFrom-Json
 ```
@@ -53,7 +53,7 @@ The id of the catalog item
 ```yaml
 Type: String
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -68,7 +68,7 @@ The name of the catalog item
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -76,6 +76,10 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -88,4 +92,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

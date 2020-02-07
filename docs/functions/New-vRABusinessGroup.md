@@ -8,13 +8,13 @@ Create a vRA Business Group
 ### Standard (Default)
 ```
 New-vRABusinessGroup [-TenantId <String>] -Name <String> [-Description <String>]
- [-BusinessGroupManager <String[]>] [-SupportUser <String[]>] [-User <String[]>] [-MachinePrefixId <String>]
- -SendManagerEmailsTo <String> [-WhatIf] [-Confirm]
+ [-BusinessGroupManager <String[]>] [-SupportUser <String[]>] [-SharedAccessUser <String[]>] [-User <String[]>]
+ [-MachinePrefixId <String>] -SendManagerEmailsTo <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### JSON
 ```
-New-vRABusinessGroup [-TenantId <String>] -JSON <String> [-WhatIf] [-Confirm]
+New-vRABusinessGroup [-TenantId <String>] -JSON <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,14 +22,21 @@ Create a vRA Business Group
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 New-vRABusinessGroup -TenantId Tenant01 -Name BusinessGroup01 -Description "Business Group 01" -BusinessGroupManager "busgroupmgr01@vrademo.local","busgroupmgr02@vrademo.local" -SupportUser "supportusers@vrademo.local" `
 ```
 
 -User "basicusers@vrademo.local" -MachinePrefixId "87e99513-cbea-4589-8678-c84c5907bdf2" -SendManagerEmailsTo "busgroupmgr01@vrademo.local"
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
+```
+New-vRABusinessGroup -TenantId Tenant01 -Name BusinessGroup02 -Description "Business Group 02" -BusinessGroupManager "busgroupmgr02@vrademo.local" -SharedAccessUser "sharedaccess01@vrademo.local" `
+```
+
+-SendManagerEmailsTo "busgroupmgr02@vrademo.local"
+
+### EXAMPLE 3
 ```
 $JSON = @"
 ```
@@ -102,7 +109,7 @@ Tenant ID
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +124,7 @@ Business Group Name
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -132,7 +139,7 @@ Business Group Description
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,7 +154,7 @@ Business Group Managers
 ```yaml
 Type: String[]
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +169,22 @@ Business Group Support Users
 ```yaml
 Type: String[]
 Parameter Sets: Standard
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharedAccessUser
+Business Group Shared Access Users
+
+```yaml
+Type: String[]
+Parameter Sets: Standard
+Aliases:
 
 Required: False
 Position: Named
@@ -177,7 +199,7 @@ Business Group Users
 ```yaml
 Type: String[]
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -192,7 +214,7 @@ Machine Prefix Id
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -207,7 +229,7 @@ Send Manager Emails To
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -222,7 +244,7 @@ Body text to send in JSON format
 ```yaml
 Type: String
 Parameter Sets: JSON
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -262,6 +284,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String.
@@ -273,4 +299,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

@@ -8,12 +8,12 @@ Update a vRA catalog item
 ### Standard (Default)
 ```
 Set-vRACatalogItem -Id <String> [-Quota <Int32>] [-Service <String>] [-NewAndNoteworthy <Boolean>]
- [-IconId <String>] [-WhatIf] [-Confirm]
+ [-IconId <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetStatus
 ```
-Set-vRACatalogItem -Id <String> [-Status <String>] [-IconId <String>] [-WhatIf] [-Confirm]
+Set-vRACatalogItem -Id <String> [-Status <String>] [-IconId <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -21,27 +21,27 @@ Update a vRA catalog item
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Set-vRACatalogItem -Id dab4e578-57c5-4a30-b3b7-2a5cefa52e9e -Status PUBLISHED
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Set-vRACatalogItem -Id dab4e578-57c5-4a30-b3b7-2a5cefa52e9e -Quota 1
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Set-vRACatalogItem -Id dab4e578-57c5-4a30-b3b7-2a5cefa52e9e -Service "Default Service"
 ```
 
-### -------------------------- EXAMPLE 4 --------------------------
+### EXAMPLE 4
 ```
 Set-vRACatalogItem -Id dab4e578-57c5-4a30-b3b7-2a5cefa52e9e -NewAndNoteworthy $false
 ```
 
-### -------------------------- EXAMPLE 5 --------------------------
+### EXAMPLE 5
 ```
 Get-vRACatalogItem  -Name "Create cluster" | Set-vRACatalogItem -IconId "cafe_icon_CatalogItem01" -Confirm:$false
 ```
@@ -57,7 +57,7 @@ The id of the catalog item
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -73,7 +73,7 @@ PUBLISHED, RETIRED, STAGING)
 ```yaml
 Type: String
 Parameter Sets: SetStatus
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,7 +88,7 @@ The Quota of the catalog item
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +103,7 @@ The Service to assign the catalog item to
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +118,7 @@ Mark the catalog item as New and noteworthy in the UI
 ```yaml
 Type: Boolean
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ Typically it would have already been created via Import-vRAServiceIcon
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,6 +175,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.Int
@@ -188,4 +192,3 @@ System.Bool
 ## NOTES
 
 ## RELATED LINKS
-

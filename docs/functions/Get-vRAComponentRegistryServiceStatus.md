@@ -7,17 +7,17 @@ Get component registry service status
 
 ### Standard (Default)
 ```
-Get-vRAComponentRegistryServiceStatus [-Page <Int32>] [-Limit <Int32>]
+Get-vRAComponentRegistryServiceStatus [-Page <Int32>] [-Limit <Int32>] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Get-vRAComponentRegistryServiceStatus -Id <String[]>
+Get-vRAComponentRegistryServiceStatus -Id <String[]> [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-vRAComponentRegistryServiceStatus -Name <String[]>
+Get-vRAComponentRegistryServiceStatus -Name <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,27 +25,27 @@ Get component registry service status
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRAComponentRegistryServiceStatus
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRAComponentRegistryServiceStatus -Limit 9999
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRAComponentRegistryServiceStatus -Page 1
 ```
 
-### -------------------------- EXAMPLE 4 --------------------------
+### EXAMPLE 4
 ```
 Get-vRAComponentRegistryServiceStatus -Id xxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-### -------------------------- EXAMPLE 5 --------------------------
+### EXAMPLE 5
 ```
 Get-vRAComponentRegistryServiceStatus -Name "iaas-service"
 ```
@@ -58,7 +58,7 @@ The Id of the service
 ```yaml
 Type: String[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -73,7 +73,7 @@ The name of the service
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -88,7 +88,7 @@ The index of the page to display.
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ This has a default value of 100.
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,6 +112,10 @@ Default value: 100
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -126,4 +130,3 @@ System.Management.Automation.SwitchParameter
 ## NOTES
 
 ## RELATED LINKS
-

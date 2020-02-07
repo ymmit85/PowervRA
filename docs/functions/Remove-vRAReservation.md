@@ -7,12 +7,12 @@ Remove a reservation
 
 ### ById (Default)
 ```
-Remove-vRAReservation -Id <String[]> [-WhatIf] [-Confirm]
+Remove-vRAReservation -Id <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Remove-vRAReservation -Name <String[]> [-WhatIf] [-Confirm]
+Remove-vRAReservation -Name <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -20,17 +20,17 @@ Remove a reservation
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Remove-vRAReservation -Name Reservation1
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Remove-vRAReservation -Id 75ae3400-beb5-4b0b-895a-0484413c93b1
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRAReservation -Name Reservation1 | Remove-vRAReservation
 ```
@@ -43,7 +43,7 @@ The id of the reservation
 ```yaml
 Type: String[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -58,7 +58,7 @@ The name of the reservation
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -98,6 +98,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
@@ -107,4 +111,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

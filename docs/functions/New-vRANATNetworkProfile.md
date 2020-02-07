@@ -12,6 +12,7 @@ New-vRANATNetworkProfile -Name <String> [-Description <String>] -SubnetMask <Str
  [-DNSSuffix <String>] [-DNSSearchSuffix <String>] [-PrimaryWinsAddress <String>]
  [-SecondaryWinsAddress <String>] [-IPRanges <PSObject[]>] -NatType <String> [-DHCPEnabled]
  [-DHCPStartAddress <String>] [-DHCPEndAddress <String>] [-DHCPLeaseTime <Int32>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### UseExternalProfileSettings
@@ -19,7 +20,7 @@ New-vRANATNetworkProfile -Name <String> [-Description <String>] -SubnetMask <Str
 New-vRANATNetworkProfile -Name <String> [-Description <String>] -SubnetMask <String> [-GatewayAddress <String>]
  -ExternalNetworkProfile <String> [-UseExternalNetworkProfileSettings] [-IPRanges <PSObject[]>]
  -NatType <String> [-DHCPEnabled] [-DHCPStartAddress <String>] [-DHCPEndAddress <String>]
- [-DHCPLeaseTime <Int32>] [-WhatIf] [-Confirm]
+ [-DHCPLeaseTime <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,7 +28,7 @@ Create a vRA nat network profile
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 $DefinedRange1 = New-vRANetworkProfileIPRangeDefinition -Name "External-Range-01" -Description "Example 1" -StartIPv4Address "10.70.1.2" -EndIPv4Address "10.70.1.5"
 ```
@@ -42,7 +43,7 @@ The network profile Name
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -57,7 +58,7 @@ The network profile Description
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -72,7 +73,7 @@ The subnet mask of the network profile
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -87,7 +88,7 @@ The gateway address of the network profile
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +103,7 @@ The external network profile that will be linked to that Routed or NAT network p
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -117,7 +118,7 @@ Use the settings from the selected external network profile
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UseExternalProfileSettings
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,7 +133,7 @@ The address of the primary DNS server
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,7 +148,7 @@ The address of the secondary DNS server
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +163,7 @@ The DNS suffix
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -177,7 +178,7 @@ The DNS search suffix
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -192,7 +193,7 @@ The address of the primary wins server
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -207,7 +208,7 @@ The address of the secondary wins server
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -222,7 +223,7 @@ An array of ip address ranges
 ```yaml
 Type: PSObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -238,7 +239,7 @@ This can be One-to-One or One-to-Many
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -254,7 +255,7 @@ Nat type must be One-to-Many
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -269,7 +270,7 @@ The start address of the dhcp range
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -284,7 +285,7 @@ The end address of the dhcp range
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -300,7 +301,7 @@ The default is 0.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -340,6 +341,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
@@ -354,4 +359,3 @@ PSCustomObject
 ## NOTES
 
 ## RELATED LINKS
-

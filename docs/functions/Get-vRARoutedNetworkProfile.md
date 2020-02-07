@@ -7,17 +7,17 @@ Get vRA routed network profiles
 
 ### Standard (Default)
 ```
-Get-vRARoutedNetworkProfile [-Limit <Int32>] [-Page <Int32>]
+Get-vRARoutedNetworkProfile [-Limit <Int32>] [-Page <Int32>] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Get-vRARoutedNetworkProfile -Id <String[]>
+Get-vRARoutedNetworkProfile -Id <String[]> [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-vRARoutedNetworkProfile -Name <String[]>
+Get-vRARoutedNetworkProfile -Name <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,17 +25,17 @@ Get vRA routed network profile
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRARoutedNetworkProfile -Id 597ff2c1-a35f-4a81-bfd3-ca014
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRARoutedNetworkProfile -Name NetworkProfile01
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRARoutedNetworkProfile
 ```
@@ -48,7 +48,7 @@ The id of the routed network profile
 ```yaml
 Type: String[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -63,7 +63,7 @@ The name of the routed network profile
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -79,7 +79,7 @@ This has a default value of 100.
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +95,7 @@ By default this is 1.
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,6 +103,10 @@ Default value: 1
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -116,4 +120,3 @@ System.Int
 ## NOTES
 
 ## RELATED LINKS
-

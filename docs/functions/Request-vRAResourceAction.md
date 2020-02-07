@@ -8,16 +8,18 @@ Request an available resourceAction for a catalog resource
 ### ByResourceId (Default)
 ```
 Request-vRAResourceAction -ActionId <String> -ResourceId <String> [-Wait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByResourceName
 ```
 Request-vRAResourceAction -ActionId <String> -ResourceName <String> [-Wait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### JSON
 ```
-Request-vRAResourceAction -JSON <String> [-Wait] [-WhatIf] [-Confirm]
+Request-vRAResourceAction -JSON <String> [-Wait] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,29 +28,29 @@ Unlike ResourceExtensions, resource actions can be invoked via the Service Catal
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 $ResourceActionId = (Get-vRAResource -Name vm01 | Get-vRAResourceAction | Where-Object {$_.Name -eq "Reboot"}).id
 ```
 
 Request-vRAResourceAction -Id $ResourceActionId -ResourceName vm01
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Request-vRAResourceAction -Id 6a301f8c-d868-4908-8348-80ad0eb35b00 -ResourceId 20402e93-fb1d-4bd9-8a51-b809fbb946fd
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Request-vRAResourceAction -Id 6a301f8c-d868-4908-8348-80ad0eb35b00 -ResourceName vm01
 ```
 
-### -------------------------- EXAMPLE 4 --------------------------
+### EXAMPLE 4
 ```
 Request-vRAResourceAction -Id 6a301f8c-d868-4908-8348-80ad0eb35b00 -ResourceName vm01 -Wait
 ```
 
-### -------------------------- EXAMPLE 5 --------------------------
+### EXAMPLE 5
 ```
 $JSON = @"
 ```
@@ -90,7 +92,7 @@ The id of the resource that the resourceAction will execute against
 ```yaml
 Type: String
 Parameter Sets: ByResourceId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -105,7 +107,7 @@ The name of the resource that the resourceAction will execute against
 ```yaml
 Type: String
 Parameter Sets: ByResourceName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -120,7 +122,7 @@ A JSON payload for the request
 ```yaml
 Type: String
 Parameter Sets: JSON
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -135,7 +137,7 @@ Wait for the request to complete
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,6 +177,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
@@ -186,4 +192,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

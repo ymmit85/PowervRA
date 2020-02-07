@@ -7,32 +7,32 @@ Get information about vRA requests
 
 ### Standard (Default)
 ```
-Get-vRARequest [-Limit <Int32>] [-Page <Int32>]
+Get-vRARequest [-Limit <Int32>] [-Page <Int32>] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Get-vRARequest -Id <String[]>
+Get-vRARequest -Id <String[]> [<CommonParameters>]
 ```
 
 ### ByRequestNumber
 ```
-Get-vRARequest -RequestNumber <String[]>
+Get-vRARequest -RequestNumber <String[]> [<CommonParameters>]
 ```
 
 ### RequestedFor
 ```
-Get-vRARequest [-RequestedFor <String>] [-Limit <Int32>] [-Page <Int32>]
+Get-vRARequest [-RequestedFor <String>] [-Limit <Int32>] [-Page <Int32>] [<CommonParameters>]
 ```
 
 ### RequestedBy
 ```
-Get-vRARequest [-RequestedBy <String>] [-Limit <Int32>] [-Page <Int32>]
+Get-vRARequest [-RequestedBy <String>] [-Limit <Int32>] [-Page <Int32>] [<CommonParameters>]
 ```
 
 ### State
 ```
-Get-vRARequest [-State <String>] [-Limit <Int32>] [-Page <Int32>]
+Get-vRARequest [-State <String>] [-Limit <Int32>] [-Page <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,32 +41,32 @@ These are the same services that you will see via the service tab
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRARequest
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRARequest -Limit 9999
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRARequest -RequestedFor user@vsphere.local
 ```
 
-### -------------------------- EXAMPLE 4 --------------------------
+### EXAMPLE 4
 ```
 Get-vRARequest -RequestedBy user@vsphere.local
 ```
 
-### -------------------------- EXAMPLE 5 --------------------------
+### EXAMPLE 5
 ```
 Get-vRARequest -Id 697db588-b706-4836-ae38-35e0c7221e3b
 ```
 
-### -------------------------- EXAMPLE 6 --------------------------
+### EXAMPLE 6
 ```
 Get-vRARequest -RequestNumber 3
 ```
@@ -79,7 +79,7 @@ The Id of the request to query
 ```yaml
 Type: String[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -94,7 +94,7 @@ The reqest number of the request to query
 ```yaml
 Type: String[]
 Parameter Sets: ByRequestNumber
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -109,7 +109,7 @@ Show requests that were submitted on behalf of a certain user
 ```yaml
 Type: String
 Parameter Sets: RequestedFor
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ Show requests that were submitted by a certain user
 ```yaml
 Type: String
 Parameter Sets: RequestedBy
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -163,7 +163,7 @@ Supported states are:
 ```yaml
 Type: String
 Parameter Sets: State
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -179,7 +179,7 @@ This has a default value of 100.
 ```yaml
 Type: Int32
 Parameter Sets: Standard, RequestedFor, RequestedBy, State
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,7 +194,7 @@ The page of response to return
 ```yaml
 Type: Int32
 Parameter Sets: Standard, RequestedFor, RequestedBy, State
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -202,6 +202,10 @@ Default value: 1
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -215,4 +219,3 @@ System.Int
 ## NOTES
 
 ## RELATED LINKS
-

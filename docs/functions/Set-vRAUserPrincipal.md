@@ -8,7 +8,7 @@ Update a vRA local user principal
 ```
 Set-vRAUserPrincipal [-Id] <String> [[-Tenant] <String>] [[-FirstName] <String>] [[-LastName] <String>]
  [[-EmailAddress] <String>] [[-Description] <String>] [[-Password] <SecureString>] [-DisableAccount]
- [-EnableAccount] [-WhatIf] [-Confirm]
+ [-EnableAccount] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -16,22 +16,22 @@ Update a vRA Principal (user)
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Set-vRAUserPrincipal -Id user@vsphere.local -FirstName FirstName-Updated -LastName LastName-Updated -EmailAddress userupdated@vsphere.local -Description Description-Updated
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Set-vRAUserPrincipal -Id user@vsphere.local -EnableAccount
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Set-vRAUserPrincipal -Id user@vsphere.local -DisableAccount
 ```
 
-### -------------------------- EXAMPLE 4 --------------------------
+### EXAMPLE 4
 ```
 $SecurePassword = ConvertTo-SecureString "P@ssword" -AsPlainText -Force
 ```
@@ -61,7 +61,7 @@ The tenant of the user
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -76,7 +76,7 @@ First Name
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -91,7 +91,7 @@ Last Name
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -106,7 +106,7 @@ Email Address
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -121,7 +121,7 @@ Users text description
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -136,7 +136,7 @@ Users password
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -206,6 +206,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
@@ -219,4 +223,3 @@ System.Diagnostics.Switch
 ## NOTES
 
 ## RELATED LINKS
-

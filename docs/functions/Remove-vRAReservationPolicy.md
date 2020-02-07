@@ -7,12 +7,12 @@ Remove a vRA Reservation Policy
 
 ### ById (Default)
 ```
-Remove-vRAReservationPolicy -Id <String[]> [-WhatIf] [-Confirm]
+Remove-vRAReservationPolicy -Id <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Remove-vRAReservationPolicy -Name <String[]> [-WhatIf] [-Confirm]
+Remove-vRAReservationPolicy -Name <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -20,17 +20,17 @@ Remove a vRA Reservation Policy
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Remove-vRAReservationPolicy -Id "34ae1d6c-9972-4736-acdb-7ee109ad1dbd"
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Remove-vRAReservationPolicy -Name "ReservationPolicy01"
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRAReservationPolicy -Name "ReservationPolicy01" | Remove-vRAReservationPolicy -Confirm:$false
 ```
@@ -43,7 +43,7 @@ Reservation Policy ID
 ```yaml
 Type: String[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -58,7 +58,7 @@ Reservation Policy Name
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -98,6 +98,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String.
@@ -109,4 +113,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

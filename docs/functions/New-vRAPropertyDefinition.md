@@ -9,36 +9,41 @@ Create a custom Property Definition
 ```
 New-vRAPropertyDefinition -Name <String> [-Label <String>] [-Description <String>] [-Tenant <String>]
  [-Index <Int32>] [-Required] [-Encrypted] [-String] -StringDisplay <String> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Boolean
 ```
 New-vRAPropertyDefinition -Name <String> [-Label <String>] [-Description <String>] [-Tenant <String>]
  [-Index <Int32>] [-Required] [-Encrypted] [-Boolean] -BooleanDisplay <String> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Integer
 ```
 New-vRAPropertyDefinition -Name <String> [-Label <String>] [-Description <String>] [-Tenant <String>]
  [-Index <Int32>] [-Required] [-Encrypted] [-Integer] -IntegerDisplay <String> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Decimal
 ```
 New-vRAPropertyDefinition -Name <String> [-Label <String>] [-Description <String>] [-Tenant <String>]
  [-Index <Int32>] [-Required] [-Encrypted] [-Decimal] -DecimalDisplay <String> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Datetime
 ```
 New-vRAPropertyDefinition -Name <String> [-Label <String>] [-Description <String>] [-Tenant <String>]
  [-Index <Int32>] [-Required] [-Encrypted] [-Datetime] -DatetimeDisplay <String> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### JSON
 ```
 New-vRAPropertyDefinition -Name <String> [-Label <String>] [-Description <String>] [-Tenant <String>]
- [-Index <Int32>] [-Required] [-Encrypted] -JSON <String> [-WhatIf] [-Confirm]
+ [-Index <Int32>] [-Required] [-Encrypted] -JSON <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,28 +51,28 @@ Create a custom Property Definition
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 # Create a string dropdown with defined values
 ```
 
 New-vRAPropertyDefinition -Name one -String -StringDisplay DROPDOWN -ValueType Static -Values @{Name1="Value1";Name2="Value2"}
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 # Create an integer slider with min, max and increment
 ```
 
 New-vRAPropertyDefinition -Name IntegerName -Label "Select an Integer" -Integer -IntegerDisplay SLIDER -MinimumValue 1 -MaximumValue 10 -Increment 1
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 # Create a boolean checkbox
 ```
 
 New-vRAPropertyDefinition -Name BooleanName -Label "Check this box" -Boolean -BooleanDisplay CHECKBOX
 
-### -------------------------- EXAMPLE 4 --------------------------
+### EXAMPLE 4
 ```
 # Create a new decimal slider with min, max and increment
 ```
@@ -82,7 +87,7 @@ The unique name (ID) of the Property
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -97,7 +102,7 @@ The text to display in forms for the Property
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +117,7 @@ Description of the Property
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +132,7 @@ The tenant in which to create the Property Definition (Defaults to the connectio
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +147,7 @@ The display index of the Property
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +162,7 @@ Switch to flag the Property as required
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,7 +177,7 @@ Switch to flag the Property as Encrypted
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -187,7 +192,7 @@ Switch to flag the Property type as String
 ```yaml
 Type: SwitchParameter
 Parameter Sets: String
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -202,7 +207,7 @@ The form display option for the Property
 ```yaml
 Type: String
 Parameter Sets: String
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -217,7 +222,7 @@ Switch to flag the Property type as Boolean
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Boolean
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -232,7 +237,7 @@ The form display option for the Property
 ```yaml
 Type: String
 Parameter Sets: Boolean
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -247,7 +252,7 @@ Switch to flag the Property type as Integer
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Integer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -262,7 +267,7 @@ The form display option for Integer
 ```yaml
 Type: String
 Parameter Sets: Integer
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -277,7 +282,7 @@ Switch to flag the Property type as Decimal
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Decimal
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -292,7 +297,7 @@ The form display option for Decimal
 ```yaml
 Type: String
 Parameter Sets: Decimal
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -307,7 +312,7 @@ Switch to flag the Property type as Datetime
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Datetime
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -322,7 +327,7 @@ The form display option for Datetime
 ```yaml
 Type: String
 Parameter Sets: Datetime
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -337,7 +342,7 @@ Property Definition to send in JSON format
 ```yaml
 Type: String
 Parameter Sets: JSON
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -377,6 +382,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String.
@@ -388,4 +397,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

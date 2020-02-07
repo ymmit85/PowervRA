@@ -75,7 +75,8 @@
   },
    "Blueprint":
   {
-    "Name": "centos"
+    "Name": "centos",
+    "Id": "centos"
   },
    "ServiceBlueprint":
   {
@@ -127,7 +128,7 @@
 
     },
     "Icon" :{
-      
+
       "Id": "cafe_icon_Service01",
       "ImportFile": "C:\\Icons\\Service01Icon.png",
       "ExportFile": "C:\\Icons\\Service01IconExport.png"
@@ -140,6 +141,17 @@
       "Name" : "PropertyDefinition01",
       "Label": "Check this box",
       "BooleanDisplay": "CHECKBOX"
+    },
+    "PropertyGroup" : {
+      "Name" : "PropertyGroup1",
+      "Label" : "Test Property Group1",
+      "SimpleProperty": "Simple Value",
+      "ComplexProperty": {
+        "mandatory": true,
+        "encrypted": false,
+        "visibility": true,
+        "defaultValue": "Complex Value"
+      }
     }
   },
   "Principal":
@@ -153,8 +165,8 @@
     "UserPrincipalPassword": "P@ssword!",
     "GroupPrincipalName": "Group01",
     "GroupPrincipalDescription": "Group 01 Description",
-    "GroupPrincipalDescriptionUpdated": "Group 01 Description Updated"    
-  }, 
+    "GroupPrincipalDescriptionUpdated": "Group 01 Description Updated"
+  },
    "Misc":
   {
     "ApplianceServiceName": "iaas-service",

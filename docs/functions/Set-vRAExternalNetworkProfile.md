@@ -9,7 +9,7 @@ Set a vRA external network profile
 Set-vRAExternalNetworkProfile [-Id] <String> [[-Name] <String>] [[-Description] <String>]
  [[-PrimaryDNSAddress] <String>] [[-SecondaryDNSAddress] <String>] [[-DNSSuffix] <String>]
  [[-DNSSearchSuffix] <String>] [[-PrimaryWinsAddress] <String>] [[-SecondaryWinsAddress] <String>] [-WhatIf]
- [-Confirm]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -17,12 +17,12 @@ Set a vRA external network profiles
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRAExternalNetworkProfile -Name "Network-External" | Set-vRAExternalNetworkProfile -Name "Network-External-Updated" -Description "Updated Description" -PrimaryDNSAddress "10.70.1.100"
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Set-vRAExternalNetworkProfile -Id 1ada4023-8a02-4349-90bd-732f25001852 -Description "Update Description"
 ```
@@ -35,7 +35,7 @@ The network profile id
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -50,7 +50,7 @@ The network profile name
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -65,7 +65,7 @@ The network profile description
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -80,7 +80,7 @@ The address of the primary DNS server
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -95,7 +95,7 @@ The address of the secondary DNS server
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -110,7 +110,7 @@ The DNS suffix
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -125,7 +125,7 @@ The DNS search suffix
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -140,7 +140,7 @@ The address of the primary wins server
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -155,7 +155,7 @@ The address of the secondary wins server
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 9
@@ -195,6 +195,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String.
@@ -206,4 +210,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

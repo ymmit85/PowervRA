@@ -7,17 +7,19 @@ Wrapper for Invoke-RestMethod/Invoke-WebRequest with vRA specifics
 
 ### Standard (Default)
 ```
-Invoke-vRARestMethod -Method <String> -URI <String> [-Headers <IDictionary>] [-WebRequest]
+Invoke-vRARestMethod -Method <String> -URI <String> [-Headers <IDictionary>] [-WebRequest] [<CommonParameters>]
 ```
 
 ### OutFile
 ```
 Invoke-vRARestMethod -Method <String> -URI <String> [-Headers <IDictionary>] [-OutFile <String>] [-WebRequest]
+ [<CommonParameters>]
 ```
 
 ### Body
 ```
 Invoke-vRARestMethod -Method <String> -URI <String> [-Headers <IDictionary>] [-Body <String>] [-WebRequest]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,12 +27,12 @@ Wrapper for Invoke-RestMethod/Invoke-WebRequest with vRA specifics
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Invoke-vRARestMethod -Method GET -URI '/identity/api/tenants'
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 $JSON = @"
 ```
@@ -57,7 +59,7 @@ Supported Methods: GET, POST, PUT,DELETE
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -73,7 +75,7 @@ API URI, e.g.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -88,7 +90,7 @@ Optionally supply custom headers
 ```yaml
 Type: IDictionary
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +105,7 @@ REST Body in JSON format
 ```yaml
 Type: String
 Parameter Sets: Body
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +120,7 @@ Save the results to a file
 ```yaml
 Type: String
 Parameter Sets: OutFile
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +135,7 @@ Use Invoke-WebRequest rather than the default Invoke-RestMethod
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,6 +143,10 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -154,4 +160,3 @@ Switch
 ## NOTES
 
 ## RELATED LINKS
-

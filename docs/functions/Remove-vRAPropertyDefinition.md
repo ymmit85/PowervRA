@@ -6,7 +6,7 @@ Removes a Property Definiton from the specified tenant
 ## SYNTAX
 
 ```
-Remove-vRAPropertyDefinition [-Id] <String> [[-Tenant] <String>] [-WhatIf] [-Confirm]
+Remove-vRAPropertyDefinition [-Id] <String> [[-Tenant] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -15,21 +15,21 @@ If the Tenant is supplied it will delete the property for that tenant only.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 # Remove the property "Hostname"
 ```
 
 Remove-vRAPropertyDefinition -Id Hostname
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 # Remove the property "Hostname" using the pipeline
 ```
 
 Get-vRAPropertyDefinition -Id Hostname | Remove-vRAPropertyDefinition -Confirm:$false
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 # Remove the property "Hostname" from the tenant "Development"
 ```
@@ -44,7 +44,7 @@ The id of the property definition to delete
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -59,7 +59,7 @@ The tenant of the property definition to delete
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -99,6 +99,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
@@ -110,4 +114,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

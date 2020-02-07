@@ -7,17 +7,17 @@ Get a catalog item that the user is allowed to review.
 
 ### Standard (Default)
 ```
-Get-vRACatalogItem [-ListAvailable] [-Page <Int32>] [-Limit <Int32>]
+Get-vRACatalogItem [-ListAvailable] [-Page <Int32>] [-Limit <Int32>] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Get-vRACatalogItem -Id <String[]>
+Get-vRACatalogItem -Id <String[]> [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-vRACatalogItem -Name <String[]>
+Get-vRACatalogItem -Name <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,27 +27,27 @@ with catalog items that the user is permitted to review, even if they were not p
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRACatalogItem
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRACatalogItem -Limit 9999
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRACatalogItem -ListAvailable
 ```
 
-### -------------------------- EXAMPLE 4 --------------------------
+### EXAMPLE 4
 ```
 Get-vRACatalogItem -Id dab4e578-57c5-4a30-b3b7-2a5cefa52e9e
 ```
 
-### -------------------------- EXAMPLE 5 --------------------------
+### EXAMPLE 5
 ```
 Get-vRACatalogItem -Name Centos_Template
 ```
@@ -60,7 +60,7 @@ The id of the catalog item
 ```yaml
 Type: String[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -75,7 +75,7 @@ The name of the catalog item
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -90,7 +90,7 @@ Show catalog items that are not assigned to a service
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +105,7 @@ The index of the page to display.
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ This has a default value of 100
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,6 +129,10 @@ Default value: 100
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -143,4 +147,3 @@ Switch
 ## NOTES
 
 ## RELATED LINKS
-

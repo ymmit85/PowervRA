@@ -6,7 +6,7 @@ Force a data collection run
 ## SYNTAX
 
 ```
-Invoke-vRADataCollection
+Invoke-vRADataCollection [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -16,12 +16,16 @@ embedded vRO is being used for extensibility and that there is only one IaaS hos
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Invoke-vRADataCollection
 ```
 
 ## PARAMETERS
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -34,4 +38,3 @@ Invoke-vRADataCollection
 ## NOTES
 
 ## RELATED LINKS
-

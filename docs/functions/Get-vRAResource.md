@@ -8,17 +8,17 @@ Get a deployed resource
 ### Standard (Default)
 ```
 Get-vRAResource [-Type <String>] [-WithExtendedData] [-WithOperations] [-ManagedOnly] [-Limit <Int32>]
- [-Page <Int32>]
+ [-Page <Int32>] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Get-vRAResource -Id <String[]>
+Get-vRAResource -Id <String[]> [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-vRAResource -Name <String[]>
+Get-vRAResource -Name <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,27 +26,27 @@ A deployment represents a collection of deployed artifacts that have been provis
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRAResource
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRAResource -WithExtendedData
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRAResource -WithOperations
 ```
 
-### -------------------------- EXAMPLE 4 --------------------------
+### EXAMPLE 4
 ```
 Get-vRAResource -Id "6195fd70-7243-4dc9-b4f3-4b2300e15ef8"
 ```
 
-### -------------------------- EXAMPLE 5 --------------------------
+### EXAMPLE 5
 ```
 Get-vRAResource -Name "CENTOS-555667"
 ```
@@ -59,7 +59,7 @@ The id of the resource
 ```yaml
 Type: String[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -74,7 +74,7 @@ The Name of the resource
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -94,7 +94,7 @@ Supported types ar:
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +109,7 @@ Populate the resources extended data by calling their provider
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -125,7 +125,7 @@ This will force withExtendedData to true.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ business group
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +157,7 @@ This has a default value of 100
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ The index of the page to display
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,6 +180,10 @@ Default value: 1
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -194,4 +198,3 @@ Switch
 ## NOTES
 
 ## RELATED LINKS
-

@@ -7,6 +7,7 @@ Returns a list of range summaries within the network profile.
 
 ```
 Get-vRANetworkProfileIPRangeSummary [-NetworkProfileId] <String> [[-Limit] <Int32>] [[-Page] <Int32>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -14,12 +15,12 @@ Returns a list of range summaries within the network profile.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRAExternalNetworkProfile -Name EXT-01 | Get-vRANetworkProfileIPRangeSummary
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRAExternalNetworkProfile -Name EXT-01 | Get-vRANetworkProfileIPRangeSummary -Limit 10 -Page 1
 ```
@@ -48,7 +49,7 @@ This has a default value of 100.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -64,7 +65,7 @@ By default this is 1.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -72,6 +73,10 @@ Default value: 1
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -85,4 +90,3 @@ System.Int
 ## NOTES
 
 ## RELATED LINKS
-

@@ -16,11 +16,11 @@
 
     .OUTPUTS
     None
-    
+
     .EXAMPLE
     .\build.ps1
 
-    .Example 
+    .Example
     .\build.ps1 -Task Build
 #>
 
@@ -32,11 +32,10 @@ Param (
 )
 
 # --- Install dependencies
-$RequiredModules = @("BuildHelpers", "Psake", "PSScriptAnalyzer")
+$RequiredModules = @("Psake", "PSScriptAnalyzer", "BuildHelpers")
 foreach ($Module in $RequiredModules) {
-    if (!(Get-Module -Name $Module -ListAvailable)){
-        Install-Module -Name $Module -Scope CurrentUser -Force        
-    }
+    Install-Module -Name $Module -Scope CurrentUser -Force -Verbose
+    Import-Module -Name $Module
 }
 
 # --- Set Build Environment
@@ -45,8 +44,9 @@ Set-BuildEnvironment -Force
 # --- Set Psake parameters
 $PsakeBuildParameters = @{
     BuildFile = "$($PSScriptRoot)\build.psake.ps1"
-    TaskList = $Task 
-    Nologo = $true   
+
+    TaskList = $Task
+    Nologo = $true
 }
 
 # --- Start Build

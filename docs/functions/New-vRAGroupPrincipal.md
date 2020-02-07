@@ -8,11 +8,12 @@ Create a vRA custom group
 ### Standard (Default)
 ```
 New-vRAGroupPrincipal [-Tenant <String>] -Name <String> [-Description <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### JSON
 ```
-New-vRAGroupPrincipal -JSON <String> [-WhatIf] [-Confirm]
+New-vRAGroupPrincipal -JSON <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -20,12 +21,12 @@ Create a vRA Principal (user)
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 New-vRAGroupPrincipal -Name TestGroup01 -Description "Test Group 01"
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 $JSON = @"
 ```
@@ -52,7 +53,7 @@ The tenant of the group
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -67,7 +68,7 @@ Group name
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -82,7 +83,7 @@ A description for the group
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +98,7 @@ Body text to send in JSON format
 ```yaml
 Type: String
 Parameter Sets: JSON
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -137,6 +138,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String.
@@ -148,4 +153,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

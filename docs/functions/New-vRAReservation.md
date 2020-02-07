@@ -13,11 +13,12 @@ New-vRAReservation -Type <String> -Name <String> [-Tenant <String>] -BusinessGro
  [-EmailBusinessGroupManager] [-AlertRecipients <String[]>] [-StorageAlertPercentageLevel <Int32>]
  [-MemoryAlertPercentageLevel <Int32>] [-CPUAlertPercentageLevel <Int32>]
  [-MachineAlertPercentageLevel <Int32>] [-AlertReminderFrequency <Int32>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### JSON
 ```
-New-vRAReservation -JSON <String> [-NewName <String>] [-WhatIf] [-Confirm]
+New-vRAReservation -JSON <String> [-NewName <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,7 +26,7 @@ Create a new reservation
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 # --- Create a new Reservation in vRA 7.1
 ```
@@ -64,7 +65,7 @@ $Param = @{
 
 New-vRAReservation @Param -Verbose
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 # --- Create a new Reservation in vRA 7.2 and later
 ```
@@ -113,7 +114,7 @@ Valid types vRA 7.2 and later: Amazon EC2, Azure, Hyper-V (SCVMM), Hyper-V (Stan
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -128,7 +129,7 @@ The name of the reservation
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -143,7 +144,7 @@ The tenant that will own the reservation
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +159,7 @@ The business group that will be associated with the reservation
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -173,7 +174,7 @@ The reservation policy that will be associated with the reservation
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -188,7 +189,7 @@ The priority of the reservation
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -203,7 +204,7 @@ The compute resource that will be associated with the reservation
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -218,7 +219,7 @@ The number of machines that can be provisioned in the reservation
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -233,7 +234,7 @@ The amount of memory available to this reservation
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -248,7 +249,7 @@ The storage that will be associated with the reservation
 ```yaml
 Type: PSObject[]
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -263,7 +264,7 @@ The network that will be associated with this reservation
 ```yaml
 Type: PSObject[]
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -278,7 +279,7 @@ The resource pool that will be associated with this reservation
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -293,7 +294,7 @@ Enable alerts
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -308,7 +309,7 @@ Email the alerts to the business group manager
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -323,7 +324,7 @@ The recipients that will recieve email alerts
 ```yaml
 Type: String[]
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -338,7 +339,7 @@ The threshold for storage alerts
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -353,7 +354,7 @@ The threshold for memory alerts
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -368,7 +369,7 @@ The threshold for cpu alerts
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -383,7 +384,7 @@ The threshold for machine alerts
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -398,7 +399,7 @@ Alert frequency in days
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -413,7 +414,7 @@ Body text to send in JSON format
 ```yaml
 Type: String
 Parameter Sets: JSON
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -428,7 +429,7 @@ If passing a JSON payload NewName can be used to set the reservation name
 ```yaml
 Type: String
 Parameter Sets: JSON
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -468,6 +469,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
@@ -482,4 +487,3 @@ System.Management.Automation.PSObject
 ## NOTES
 
 ## RELATED LINKS
-

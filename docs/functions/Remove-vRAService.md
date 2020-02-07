@@ -6,7 +6,7 @@ Remove a vRA Service
 ## SYNTAX
 
 ```
-Remove-vRAService [-Id] <String[]> [-WhatIf] [-Confirm]
+Remove-vRAService [-Id] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -14,17 +14,17 @@ Remove a vRA Service
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Remove-vRAService -Id "d00d3631-997c-40f7-90e8-7ccbc153c20c"
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRAService -Id "d00d3631-997c-40f7-90e8-7ccbc153c20c" | Remove-vRAService
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRAService | Where-Object {$_.name -ne "Default Service"} | Remove-vRAService
 ```
@@ -37,7 +37,7 @@ The id of the service
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -77,6 +77,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
@@ -88,4 +92,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

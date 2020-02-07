@@ -9,7 +9,7 @@ Create a vRA external network profile
 New-vRAExternalNetworkProfile [-Name] <String> [[-Description] <String>] [-SubnetMask] <String>
  [[-GatewayAddress] <String>] [[-PrimaryDNSAddress] <String>] [[-SecondaryDNSAddress] <String>]
  [[-DNSSuffix] <String>] [[-DNSSearchSuffix] <String>] [[-IPRanges] <PSObject[]>]
- [[-PrimaryWinsAddress] <String>] [[-SecondaryWinsAddress] <String>] [-WhatIf] [-Confirm]
+ [[-PrimaryWinsAddress] <String>] [[-SecondaryWinsAddress] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -17,7 +17,7 @@ Create a vRA external network profile
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 $DefinedRange1 = New-vRANetworkProfileIPRangeDefinition -Name "External-Range-01" -Description "Example 1" -StartIPv4Address "10.60.1.2" -EndIPv4Address "10.60.1.5"
 ```
@@ -34,7 +34,7 @@ The network profile Name
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -49,7 +49,7 @@ The network profile Description
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -64,7 +64,7 @@ The subnet mask of the network profile
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -79,7 +79,7 @@ The gateway address of the network profile
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -94,7 +94,7 @@ The address of the primary DNS server
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -109,7 +109,7 @@ The address of the secondary DNS server
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -124,7 +124,7 @@ The DNS suffix
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -139,7 +139,7 @@ The DNS search suffix
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -154,7 +154,7 @@ An array of ip address ranges
 ```yaml
 Type: PSObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 9
@@ -169,7 +169,7 @@ The address of the primary wins server
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 10
@@ -184,7 +184,7 @@ The address of the secondary wins server
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 11
@@ -224,6 +224,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
@@ -236,4 +240,3 @@ PSCustomObject
 ## NOTES
 
 ## RELATED LINKS
-

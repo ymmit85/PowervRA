@@ -6,7 +6,7 @@ Imports a vRA Content Package
 ## SYNTAX
 
 ```
-Import-vRAPackage [-File] <String[]> [-DontValidatePackage] [-WhatIf] [-Confirm]
+Import-vRAPackage [-File] <String[]> [-DontValidatePackage] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -14,12 +14,12 @@ Imports a vRA Content Package
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Import-vRAPackage -File C:\Packages\Package100.zip
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-ChildItem -Path C:\Packages\Package100.zip| Import-vRAPackage -Confirm:$false
 ```
@@ -32,7 +32,7 @@ The content package file
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -48,7 +48,7 @@ Not recommended by the API documentation
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,6 +88,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
@@ -100,4 +104,3 @@ System.Switch
 ## NOTES
 
 ## RELATED LINKS
-

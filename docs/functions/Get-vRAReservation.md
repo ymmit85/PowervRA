@@ -7,17 +7,17 @@ Get a reservation
 
 ### Standard (Default)
 ```
-Get-vRAReservation [-Limit <Int32>] [-Page <Int32>]
+Get-vRAReservation [-Limit <Int32>] [-Page <Int32>] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Get-vRAReservation -Id <String[]>
+Get-vRAReservation -Id <String[]> [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-vRAReservation -Name <String[]>
+Get-vRAReservation -Name <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,17 +25,17 @@ Get a reservation
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRAReservation -Id 75ae3400-beb5-4b0b-895a-0484413c93b1
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRAReservation -Name Reservation1
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRAReservation
 ```
@@ -48,7 +48,7 @@ The id of the reservation
 ```yaml
 Type: String[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -63,7 +63,7 @@ The name of the reservation
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -79,7 +79,7 @@ This has a default value of 100.
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +95,7 @@ All pages are retuend by default
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,6 +103,10 @@ Default value: 1
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -117,4 +121,3 @@ System.Object[]
 ## NOTES
 
 ## RELATED LINKS
-

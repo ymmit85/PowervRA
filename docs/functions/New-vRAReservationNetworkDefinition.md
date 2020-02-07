@@ -7,7 +7,7 @@ Creates a new network definition for a reservation.
 
 ```
 New-vRAReservationNetworkDefinition -Type <String> -ComputeResourceId <String> -NetworkPath <String>
- [-NetworkProfile <String>] [-WhatIf] [-Confirm]
+ [-NetworkProfile <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -18,7 +18,7 @@ One or more of these can be added to an array and passed to New-vRAReservation.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 # Create a network definition for type vSphere in vRA 7.1
 ```
@@ -27,7 +27,7 @@ $NetworkDefinitionArray = @()
 $Network1 = New-vRAReservationNetworkDefinition -Type 'vSphere' -ComputeResourceId 75ae3400-beb5-4b0b-895a-0484413c93b1 -NetworkPath 'VM Network' -NetworkProfile 'Test'
 $NetworkDefinitionArray += $Network1
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 # Create a network definition for type vSphere in vRA 7.2 and later
 ```
@@ -46,7 +46,7 @@ Valid types vRA 7.2 and later: Amazon EC2, Azure, Hyper-V (SCVMM), Hyper-V (Stan
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -61,7 +61,7 @@ The id of the compute resource
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -76,7 +76,7 @@ The network path
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -91,7 +91,7 @@ The network profile
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -131,6 +131,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String.
@@ -142,4 +146,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

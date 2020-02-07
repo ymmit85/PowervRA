@@ -11,12 +11,12 @@ New-vRATenantDirectory -ID <String> -Name <String> [-Description <String>] [-Ali
  -Domain <String> -UserNameDN <String> -Password <SecureString> -URL <String> -GroupBaseSearchDN <String>
  [-UserBaseSearchDN <String>] [-Subdomains <String>] -GroupBaseSearchDNs <String[]>
  [-UserBaseSearchDNs <String[]>] [-DomainAdminUsername <String>] [-DomainAdminPassword <SecureString>]
- [-Certificate <String>] [-TrustAll] [-UseGlobalCatalog] [-WhatIf] [-Confirm]
+ [-Certificate <String>] [-TrustAll] [-UseGlobalCatalog] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### JSON
 ```
-New-vRATenantDirectory -ID <String> -JSON <String> [-WhatIf] [-Confirm]
+New-vRATenantDirectory -ID <String> -JSON <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,7 +24,7 @@ Create a vRA Tenant Directory
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 $SecurePassword = ConvertTo-SecureString "P@ssword" -AsPlainText -Force
 ```
@@ -33,7 +33,7 @@ New-vRATenantDirectory -ID Tenant01 -Name Tenant01 -Description "This is the Ten
   -Password $SecurePassword -URL "ldap://dc01.vrademo.local:389" -GroupBaseSearchDN "OU=Tenant01,OU=Tenants,DC=vrademo,DC=local" -UserBaseSearchDN "OU=Tenant01,OU=Tenants,DC=vrademo,DC=local" \`
  -GroupBaseSearchDNs "OU=Tenant01,OU=Tenants,DC=vrademo,DC=local" -UserBaseSearchDNs "OU=Tenant01,OU=Tenants,DC=vrademo,DC=local" -TrustAll
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 $JSON = @"
 ```
@@ -69,7 +69,7 @@ Tenant ID
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -84,7 +84,7 @@ Tenant Directory Name
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -99,7 +99,7 @@ Tenant Directory Description
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ Tenant Directory Alias
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ Tenant Directory Type
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -144,7 +144,7 @@ Tenant Directory Domain
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -159,7 +159,7 @@ DN of the Username to authenticate the Tenant Directory with
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -174,7 +174,7 @@ Password of the Username to authenticate the Tenant Directory with
 ```yaml
 Type: SecureString
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -190,7 +190,7 @@ ldap://dc01.vrademo.local:389
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -205,7 +205,7 @@ Tenant Directory GroupBaseSearchDN
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -220,7 +220,7 @@ Tenant Directory UserBaseSearchDN
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -235,7 +235,7 @@ Tenant Directory Subdomains
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -250,7 +250,7 @@ Tenant Directory GroupBaseSearchDNs
 ```yaml
 Type: String[]
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -265,7 +265,7 @@ Tenant Directory UserBaseSearchDNs
 ```yaml
 Type: String[]
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -280,7 +280,7 @@ Tenant Directory DomainAdminUserName
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -295,7 +295,7 @@ Tenant Directory DomainAdminPassword
 ```yaml
 Type: SecureString
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -310,7 +310,7 @@ Tenant Directory Certificate
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -325,7 +325,7 @@ Tenant Directory TrustAll
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -340,7 +340,7 @@ Tenant Directory UseGlobalCatalog
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -355,7 +355,7 @@ Body text to send in JSON format
 ```yaml
 Type: String
 Parameter Sets: JSON
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -395,6 +395,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
@@ -407,4 +411,3 @@ System.SecureString
 ## NOTES
 
 ## RELATED LINKS
-

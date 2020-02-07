@@ -6,7 +6,7 @@ Finds catalog principals
 ## SYNTAX
 
 ```
-Get-vRACatalogPrincipal -Id <String[]>
+Get-vRACatalogPrincipal -Id <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -19,17 +19,17 @@ DOCS: catalog-service/api/docs/ns0_catalogPrincipal.html
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRACatalogPrincipal -Id group@vsphere.local
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRACatalogPrincipal -Id user@vsphere.local
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRACatalogPrincipal -Id group@vsphere.local
 ```
@@ -51,6 +51,10 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
@@ -62,4 +66,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

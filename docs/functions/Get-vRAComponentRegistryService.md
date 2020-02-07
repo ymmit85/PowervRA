@@ -7,17 +7,17 @@ Get information about vRA services
 
 ### Standard (Default)
 ```
-Get-vRAComponentRegistryService [-Page <Int32>] [-Limit <Int32>]
+Get-vRAComponentRegistryService [-Page <Int32>] [-Limit <Int32>] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Get-vRAComponentRegistryService -Id <String[]>
+Get-vRAComponentRegistryService -Id <String[]> [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Get-vRAComponentRegistryService -Name <String[]>
+Get-vRAComponentRegistryService -Name <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,27 +25,27 @@ Get information about vRA services.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRAComponentRegistryService
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRAComponentRegistryService -Limit 9999
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRAComponentRegistryService -Page 1
 ```
 
-### -------------------------- EXAMPLE 4 --------------------------
+### EXAMPLE 4
 ```
 Get-vRAComponentRegistryService -Id xxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-### -------------------------- EXAMPLE 5 --------------------------
+### EXAMPLE 5
 ```
 Get-vRAComponentRegistryService -Name "iaas-service"
 ```
@@ -59,7 +59,7 @@ Specifying the Id of the service will retrieve detailed information.
 ```yaml
 Type: String[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -74,7 +74,7 @@ The name of the service
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -89,7 +89,7 @@ The index of the page to display.
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +105,7 @@ This has a default value of 100.
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,6 +113,10 @@ Default value: 100
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -127,4 +131,3 @@ System.Management.Automation.SwitchParameter
 ## NOTES
 
 ## RELATED LINKS
-

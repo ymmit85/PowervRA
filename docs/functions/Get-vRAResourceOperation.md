@@ -7,17 +7,17 @@ Get a resource operation
 
 ### Standard (Default)
 ```
-Get-vRAResourceOperation [-Page <Int32>] [-Limit <Int32>]
+Get-vRAResourceOperation [-Page <Int32>] [-Limit <Int32>] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Get-vRAResourceOperation -Id <String[]>
+Get-vRAResourceOperation -Id <String[]> [<CommonParameters>]
 ```
 
 ### ByExternalId
 ```
-Get-vRAResourceOperation -ExternalId <String[]>
+Get-vRAResourceOperation -ExternalId <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,22 +27,22 @@ These operations can be invoked / accessed by consumers through the self-service
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRAResourceOperation
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRAResourceOperation -Id "a4d57b16-9706-471b-9960-d0855fe544bb"
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRAResourceOperation -Name "Power On"
 ```
 
-### -------------------------- EXAMPLE 4 --------------------------
+### EXAMPLE 4
 ```
 Get-vRAResourceOperation -ExternalId "Infrastructure.Machine.Action.PowerOn"
 ```
@@ -55,7 +55,7 @@ The id of the resource operation
 ```yaml
 Type: String[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -70,7 +70,7 @@ The external id of the resource operation
 ```yaml
 Type: String[]
 Parameter Sets: ByExternalId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -85,7 +85,7 @@ The index of the page to display.
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ This has a default value of 100.
 ```yaml
 Type: Int32
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,6 +109,10 @@ Default value: 100
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -122,4 +126,3 @@ System.Int
 ## NOTES
 
 ## RELATED LINKS
-

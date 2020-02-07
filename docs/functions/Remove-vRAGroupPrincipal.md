@@ -6,7 +6,7 @@ Remove a vRA custom group
 ## SYNTAX
 
 ```
-Remove-vRAGroupPrincipal -Id <String[]> [-Tenant <String>] [-WhatIf] [-Confirm]
+Remove-vRAGroupPrincipal -Id <String[]> [-Tenant <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -14,12 +14,12 @@ Remove a vRA custom group
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Remove-vRAGroupPrincipal -PrincipalId Group@Tenant
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRAGroupPrincipal -Id Group@Tenant | Remove-vRAGroupPrincipal
 ```
@@ -47,7 +47,7 @@ The tenant of the group
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,6 +87,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String.
@@ -98,4 +102,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

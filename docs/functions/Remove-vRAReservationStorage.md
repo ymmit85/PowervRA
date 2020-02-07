@@ -6,7 +6,7 @@ Remove a storage from a reservation
 ## SYNTAX
 
 ```
-Remove-vRAReservationStorage [-Id] <String> [-StoragePath] <String> [-WhatIf] [-Confirm]
+Remove-vRAReservationStorage [-Id] <String> [-StoragePath] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -14,12 +14,12 @@ Remove a storage from a reservation
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRAReservation -Name Reservation01 | Remove-vRAReservationStorage -StoragePath Datastore01
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Remove-vRAReservationStorage -Id 8731ceb3-01cd-4dd6-834e-49a9aa8057d8 -StoragePath Datastore01
 ```
@@ -32,7 +32,7 @@ The id of the reservation
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -47,7 +47,7 @@ The storage path
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -87,6 +87,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
@@ -96,4 +100,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

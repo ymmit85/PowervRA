@@ -6,7 +6,7 @@ Disconnect from a vRA server
 ## SYNTAX
 
 ```
-Disconnect-vRAServer [-WhatIf] [-Confirm]
+Disconnect-vRAServer [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -14,12 +14,12 @@ Disconnect from a vRA server by removing the authorization token and the global 
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Disconnect-vRAServer
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Disconnect-vRAServer -Confirm:$false
 ```
@@ -57,6 +57,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ## OUTPUTS
@@ -64,4 +68,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

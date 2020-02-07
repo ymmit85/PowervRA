@@ -8,12 +8,12 @@ Create a vRA Service for the current tenant
 ### Standard (Default)
 ```
 New-vRAService -Name <String> [-Description <String>] [-Owner <String>] [-SupportTeam <String>]
- [-IconId <String>] [-WhatIf] [-Confirm]
+ [-IconId <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### JSON
 ```
-New-vRAService -JSON <String> [-WhatIf] [-Confirm]
+New-vRAService -JSON <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,17 +29,17 @@ Currently unsupported interactive actions:
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 New-vRAService -Name "New Service"
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 New-vRAService -Name "New Service" -Description "A new service" -Owner user@vsphere.local -SupportTeam customgroup@vsphere.local -IconId "cafe_icon_Service01"
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 $JSON = @"
 ```
@@ -71,7 +71,7 @@ The name of the service
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -86,7 +86,7 @@ A description of the service
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ The owner of the service
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ The support team of the service
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ Typically it would have already been created via Import-vRAServiceIcon
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,7 +148,7 @@ A json string of type service (catalog-service/api/docs/el_ns0_service.html)
 ```yaml
 Type: String
 Parameter Sets: JSON
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -188,6 +188,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
@@ -199,4 +203,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

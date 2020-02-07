@@ -11,7 +11,7 @@ New-vRARoutedNetworkProfile -Name <String> [-Description <String>] -SubnetMask <
  [-GatewayAddress <String>] -ExternalNetworkProfile <String> [-PrimaryDNSAddress <String>]
  [-SecondaryDNSAddress <String>] [-DNSSuffix <String>] [-DNSSearchSuffix <String>]
  [-PrimaryWinsAddress <String>] [-SecondaryWinsAddress <String>] [-RangeSubnetMask <String>]
- [-BaseIPAddress <String>] -IPRanges <PSObject[]> [-WhatIf] [-Confirm]
+ [-BaseIPAddress <String>] -IPRanges <PSObject[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UseExternalProfileSettings
@@ -19,6 +19,7 @@ New-vRARoutedNetworkProfile -Name <String> [-Description <String>] -SubnetMask <
 New-vRARoutedNetworkProfile -Name <String> [-Description <String>] -SubnetMask <String>
  [-GatewayAddress <String>] -ExternalNetworkProfile <String> [-UseExternalNetworkProfileSettings]
  [-RangeSubnetMask <String>] [-BaseIPAddress <String>] -IPRanges <PSObject[]> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,7 +27,7 @@ Create a vRA routed network profiles
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 $DefinedRange1 = New-vRANetworkProfileIPRangeDefinition -Name "External-Range-01" -Description "Example 1" -StartIPv4Address "10.80.1.2" -EndIPv4Address "10.80.1.5"
 ```
@@ -41,7 +42,7 @@ The network profile Name
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -56,7 +57,7 @@ The network profile Description
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -71,7 +72,7 @@ The subnet mask of the network profile
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -86,7 +87,7 @@ The gateway address of the network profile
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +102,7 @@ The external network profile that will be linked to that Routed or NAT network p
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -116,7 +117,7 @@ Use the settings from the selected external network profile
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UseExternalProfileSettings
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -131,7 +132,7 @@ The address of the primary DNS server
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +147,7 @@ The address of the secondary DNS server
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -161,7 +162,7 @@ The DNS suffix
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +177,7 @@ The DNS search suffix
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -191,7 +192,7 @@ The address of the primary wins server
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -206,7 +207,7 @@ The address of the secondary wins server
 ```yaml
 Type: String
 Parameter Sets: Standard
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -221,7 +222,7 @@ The subnetMask for the routed range
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -236,7 +237,7 @@ The base ip of the routed range
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -251,7 +252,7 @@ An array of ip address ranges
 ```yaml
 Type: PSObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -291,6 +292,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
@@ -304,4 +309,3 @@ PSCustomObject
 ## NOTES
 
 ## RELATED LINKS
-

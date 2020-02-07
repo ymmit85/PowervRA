@@ -6,7 +6,7 @@ Get a reservation json template
 ## SYNTAX
 
 ```
-Get-vRAReservationTemplate [-Id] <String> [[-OutFile] <String>]
+Get-vRAReservationTemplate [-Id] <String> [[-OutFile] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -15,17 +15,17 @@ This template can then be used to create a new reservation with the same propert
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRAReservationTemplate -Id 75ae3400-beb5-4b0b-895a-0484413c93b1 -OutFile C:\Reservation.json
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Get-vRAReservation -Name Reservation1 | Get-vRAReservationTemplate -OutFile C:\Reservation.json
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRAReservation -Name Reservation1 | Get-vRAReservationTemplate
 ```
@@ -38,7 +38,7 @@ The id of the reservation
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -53,7 +53,7 @@ The path to an output file
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -61,6 +61,10 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -73,4 +77,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

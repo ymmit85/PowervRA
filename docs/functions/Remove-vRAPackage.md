@@ -7,12 +7,12 @@ Remove a vRA Content Package
 
 ### Id (Default)
 ```
-Remove-vRAPackage -Id <String[]> [-WhatIf] [-Confirm]
+Remove-vRAPackage -Id <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Name
 ```
-Remove-vRAPackage -Name <String[]> [-WhatIf] [-Confirm]
+Remove-vRAPackage -Name <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -20,17 +20,17 @@ Remove a vRA Content Package
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Remove-vRAPackage -Id "f8e0d99e-c567-4031-99cb-d8410c841ed7"
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Remove-vRAPackage -Name "Package01","Package02"
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRAPackage -Name "Package01","Package02" | Remove-vRAPackage -Confirm:$false
 ```
@@ -43,7 +43,7 @@ Content Package Id
 ```yaml
 Type: String[]
 Parameter Sets: Id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -58,7 +58,7 @@ Content Package Name
 ```yaml
 Type: String[]
 Parameter Sets: Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -98,6 +98,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String.
@@ -109,4 +113,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

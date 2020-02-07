@@ -10,7 +10,7 @@ Set-vRANATNetworkProfile [-Id] <String> [[-Name] <String>] [[-Description] <Stri
  [[-GatewayAddress] <String>] [[-PrimaryDNSAddress] <String>] [[-SecondaryDNSAddress] <String>]
  [[-DNSSuffix] <String>] [[-DNSSearchSuffix] <String>] [[-PrimaryWinsAddress] <String>]
  [[-SecondaryWinsAddress] <String>] [[-NatType] <String>] [-DHCPEnabled] [[-DHCPStartAddress] <String>]
- [[-DHCPEndAddress] <String>] [[-DHCPLeaseTime] <Int32>] [-WhatIf] [-Confirm]
+ [[-DHCPEndAddress] <String>] [[-DHCPLeaseTime] <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -18,12 +18,12 @@ Set a vRA network profiles
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Get-vRANATNetworkProfile -Name "Network-Nat" | Set-vRANATNetworkProfile -Name "Network-NAT-Updated" -Description "Updated Description" -GatewayAddress "10.70.2.1" -PrimaryDNSAddress "10.70.1.100"
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Set-vRANATNetworkProfile -Id 1ada4023-8a02-4349-90bd-732f25001852 -Description "Updated Description"
 ```
@@ -36,7 +36,7 @@ The network profile id
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -51,7 +51,7 @@ The network profile name
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -66,7 +66,7 @@ The network profile description
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -81,7 +81,7 @@ The gateway address of the network profile
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -96,7 +96,7 @@ The address of the primary DNS server
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -111,7 +111,7 @@ The address of the secondary DNS server
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -126,7 +126,7 @@ The DNS suffix
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -141,7 +141,7 @@ The DNS search suffix
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -156,7 +156,7 @@ The address of the primary wins server
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 9
@@ -171,7 +171,7 @@ The address of the secondary wins server
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 10
@@ -187,7 +187,7 @@ This can be One-to-One or One-to-Many
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 11
@@ -203,7 +203,7 @@ Nat type must be One-to-Many
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,7 +218,7 @@ The start address of the dhcp range
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 12
@@ -233,7 +233,7 @@ The end address of the dhcp range
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 13
@@ -249,7 +249,7 @@ The default is 0.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 14
@@ -289,6 +289,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String.
@@ -301,4 +305,3 @@ System.Int.
 ## NOTES
 
 ## RELATED LINKS
-

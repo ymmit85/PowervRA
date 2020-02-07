@@ -7,12 +7,12 @@ Remove a vRA Business Group
 
 ### Id (Default)
 ```
-Remove-vRABusinessGroup -TenantId <String> -Id <String[]> [-WhatIf] [-Confirm]
+Remove-vRABusinessGroup -TenantId <String> -Id <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Name
 ```
-Remove-vRABusinessGroup -TenantId <String> -Name <String[]> [-WhatIf] [-Confirm]
+Remove-vRABusinessGroup -TenantId <String> -Name <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -20,17 +20,17 @@ Remove a vRA Business Group
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 ```
 Remove-vRABusinessGroup -TenantId Tenant01 -Id "f8e0d99e-c567-4031-99cb-d8410c841ed7"
 ```
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 ```
 Remove-vRABusinessGroup -TenantId Tenant01 -Name "BusinessGroup01","BusinessGroup02"
 ```
 
-### -------------------------- EXAMPLE 3 --------------------------
+### EXAMPLE 3
 ```
 Get-vRABusinessGroup -TenantId Tenant01 -Name BusinessGroup01 | Remove-vRABusinessGroup -Confirm:$false
 ```
@@ -58,7 +58,7 @@ Business Group Id
 ```yaml
 Type: String[]
 Parameter Sets: Id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -73,7 +73,7 @@ Business Group Name
 ```yaml
 Type: String[]
 Parameter Sets: Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -113,6 +113,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String.
@@ -124,4 +128,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-
